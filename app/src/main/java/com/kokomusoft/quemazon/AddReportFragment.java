@@ -55,6 +55,7 @@ public class AddReportFragment extends Fragment {
     RelativeLayout reportStepOneContainer;
     RelativeLayout reportStepTwoContainer;
     RelativeLayout reportStepThreeContainer;
+    RelativeLayout reportStepFourContainer;
     private ProgressBar progressBar;
     //FloatingTextButton currentLocationBtn;
     MaterialFancyButton currentLocationBtn;
@@ -63,6 +64,7 @@ public class AddReportFragment extends Fragment {
     private MaterialFancyButton highIntensityBtn;
     private MaterialFancyButton openCameraBtn;
     private MaterialFancyButton toStepFourBtn;
+    private MaterialFancyButton closeReportBtn;
     private ImageView cameraImage;
 
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
@@ -107,14 +109,17 @@ public class AddReportFragment extends Fragment {
         reportStepOneContainer = rootView.findViewById(R.id.reportStepOneContainer);
         reportStepTwoContainer = rootView.findViewById(R.id.reportStepTwoContainer);
         reportStepThreeContainer = rootView.findViewById(R.id.reportStepThreeContainer);
+        reportStepFourContainer = rootView.findViewById(R.id.reportStepFourContainer);
         reportStepTwoContainer.setVisibility(View.GONE);
         reportStepThreeContainer.setVisibility(View.GONE);
+        reportStepFourContainer.setVisibility(View.GONE);
         lowIntensityBtn = rootView.findViewById(R.id.lowIntensityBtn);
         mediumIntensityBtn = rootView.findViewById(R.id.mediumIntensityBtn);
         highIntensityBtn = rootView.findViewById(R.id.highIntensityBtn);
         progressBar = rootView.findViewById(R.id.progressbar);
         openCameraBtn = rootView.findViewById(R.id.openCameraBtn);
         toStepFourBtn = rootView.findViewById(R.id.toStepFourBtn);
+        closeReportBtn  = rootView.findViewById(R.id.closeReportBtn);
         cameraImage = rootView.findViewById(R.id.cameraImage);
         progressBar.setVisibility(View.INVISIBLE);
 
@@ -166,6 +171,15 @@ public class AddReportFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.d("Report completed", report.toString());
+                //TODO: Add method to send the report to the api
+                animateLayout(reportStepThreeContainer, reportStepFourContainer);
+            }
+        });
+
+        closeReportBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
             }
         });
 

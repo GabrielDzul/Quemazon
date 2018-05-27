@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity
                 transaction.add(R.id.container, fireReport,"Coso");
                 transaction.addToBackStack(null);
                 transaction.commit();
-                //fab.hide();
+                fab.hide();
             }
         });
     }
@@ -63,6 +63,10 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }
+
+        if (!fab.isShown()){
+            fab.show();
         }
     }
 
@@ -114,4 +118,6 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

@@ -9,7 +9,7 @@
     <color name="colorBlue">#2985c4</color>
     <color name="Yellow">#febd25</color>
     <color name="colorFucsia">#b43993</color>
-    <color name="backgroundColor">E9E9E9</color>
+    <color name="backgroundColor">#E9E9E9</color>
     <color name="white">#FFFFFF</color>
 
     <color name="black_overlay">#66000000</color>
@@ -21,6 +21,8 @@
     <color name="YellowTheme2">#E6B034</color>
     <color name="colorFucsiaTheme2">#FD7397</color>
     <color name="panelBackground">#F5F5F5</color>
+    <color name="panelHeaderBackground">#DEDEDE</color>
+    <color name="textDark">#212121</color>
 
 
 

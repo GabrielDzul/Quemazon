@@ -3,44 +3,62 @@
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/bg3"
+    android:background="@color/backgroundColor"
     tools:context="com.kokomusoft.quemazon.AddReportFragment">
+    <!--Subir esto al root si no queda-->
+    <!--android:background="@mipmap/bg3"-->
 
     <!-- First Step layout -->
     <RelativeLayout
         android:id="@+id/reportStepOneContainer"
         android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/panel_style"
         android:layout_height="match_parent">
 
-
-        <TextView
-            android:id="@+id/reportStepOneTitle"
+        <RelativeLayout
+            android:id="@+id/headerPanelStepOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:letterSpacing=".07"
-            android:padding="20dp"
-            android:layout_marginBottom="15dp"
-            android:text="Empecemos por la ubicación del siniestro"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:background="@drawable/panel_header_style"
+            android:layout_marginBottom="40dp">
 
-        <TextView
-            android:id="@+id/reportStepOneDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/reportStepOneTitle"
-            android:layout_marginBottom="50dp"
-            android:text="El incendio se encuentra en:"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/reportStepOneTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserrat"
+                android:letterSpacing=".02"
+                android:text="Ubicación del siniestro"
+                android:textAlignment="center"
+                android:textColor="@color/textDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/reportStepOneDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reportStepOneTitle"
+                android:fontFamily="@font/montserrat"
+                android:text="El incendio se encuentra en:"
+                android:textAlignment="center"
+                android:textColor="@color/textDark"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+
+
 
         <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/currentLocationBtn"
-            android:layout_below="@id/reportStepOneDescription"
-            android:layout_width="250dp"
+            android:layout_below="@id/headerPanelStepOne"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             fancy:mfb_icon="@string/fawi_map_marker"
             fancy:mfb_text = "Mi ubicación Actual"
@@ -55,8 +73,8 @@
             fancy:mfb_borderColor="#FFFFFF"
             fancy:mfb_borderWidth="1dp"
             fancy:mfb_radius="30dp"
-            fancy:mfb_defaultColor="#cb1925"
-            fancy:mfb_focusColor="#9bd823"/>
+            fancy:mfb_defaultColor="@color/colorAccentTheme2"
+            fancy:mfb_focusColor="@color/colorGreenTheme2"/>
 
 
 
@@ -68,40 +86,57 @@
     <RelativeLayout
         android:id="@+id/reportStepTwoContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/reportStepTwoTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:letterSpacing=".07"
-            android:padding="20dp"
-            android:layout_marginBottom="15dp"
-            android:text="Intensidad"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/panel_style">
 
-        <TextView
-            android:id="@+id/reportStepTwoDescription"
+         <RelativeLayout
+            android:id="@+id/headerPanelStepTwo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/reportStepTwoTitle"
-            android:layout_marginBottom="50dp"
-            android:text="¿Qué tan intenso es?"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="18sp" />
+            android:background="@drawable/panel_header_style"
+            android:layout_marginBottom="40dp">
+
+             <TextView
+                 android:id="@+id/reportStepTwoTitle"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:letterSpacing=".02"
+                 android:fontFamily="@font/montserrat"
+                 android:layout_marginBottom="5dp"
+                 android:text="Intensidad"
+                 android:textAlignment="center"
+                 android:textColor="@color/textDark"
+                 android:textSize="18sp"
+                 android:textStyle="bold" />
+
+             <TextView
+                 android:id="@+id/reportStepTwoDescription"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/reportStepTwoTitle"
+                 android:text="¿Qué tan intenso es?"
+                 android:fontFamily="@font/montserrat"
+                 android:textAlignment="center"
+                 android:textColor="@color/textDark"
+                 android:textSize="14sp" />
+
+         </RelativeLayout>
+
 
         <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/lowIntensityBtn"
-            android:layout_below="@id/reportStepTwoDescription"
-            android:layout_width="250dp"
+            android:layout_below="@id/headerPanelStepTwo"
+            android:layout_width="280dp"
             android:layout_height="80dp"
             fancy:mfb_icon="@string/fawi_smile_o"
             fancy:mfb_text = "LEVE - Apenas iniciando"
             fancy:mfb_textSize = "16sp"
             fancy:mfb_fontIconSize="24sp"
+            fancy:mfb_textFont= "@font/montserrat"
             android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
             android:paddingBottom="10dp"
@@ -112,17 +147,18 @@
             fancy:mfb_borderColor="#FFFFFF"
             fancy:mfb_borderWidth="1dp"
             fancy:mfb_radius="30dp"
-            fancy:mfb_defaultColor="@color/Yellow"
-            fancy:mfb_focusColor="#9bd823"/>
+            fancy:mfb_defaultColor="@color/YellowTheme2"
+            fancy:mfb_focusColor="@color/colorGreenTheme2"/>
 
         <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/mediumIntensityBtn"
             android:layout_below="@id/lowIntensityBtn"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="80dp"
             fancy:mfb_icon="@string/fawi_meh_o"
             fancy:mfb_text = "CONTROLABLE - Se expande, pero no peligran vidas"
             fancy:mfb_textSize = "16sp"
+            fancy:mfb_textFont= "@font/montserrat"
             fancy:mfb_fontIconSize="24sp"
             android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
@@ -134,18 +170,19 @@
             fancy:mfb_borderColor="#FFFFFF"
             fancy:mfb_borderWidth="1dp"
             fancy:mfb_radius="30dp"
-            fancy:mfb_defaultColor="@color/colorAccent"
-            fancy:mfb_focusColor="#9bd823"/>
+            fancy:mfb_defaultColor="@color/colorPrimaryTheme2"
+            fancy:mfb_focusColor="@color/colorGreenTheme2"/>
 
         <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/highIntensityBtn"
             android:layout_below="@id/mediumIntensityBtn"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="80dp"
             fancy:mfb_icon="@string/fawi_frown_o"
             fancy:mfb_text = "FUERA DE CONTROL - Peligran vidas o edificios"
             fancy:mfb_textSize = "16sp"
             fancy:mfb_fontIconSize="24sp"
+            fancy:mfb_textFont= "@font/montserrat"
             android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
             android:paddingBottom="10dp"
@@ -156,8 +193,8 @@
             fancy:mfb_borderColor="#FFFFFF"
             fancy:mfb_borderWidth="1dp"
             fancy:mfb_radius="30dp"
-            fancy:mfb_defaultColor="@color/colorPrimary"
-            fancy:mfb_focusColor="#9bd823"/>
+            fancy:mfb_defaultColor="@color/colorAccentTheme2"
+            fancy:mfb_focusColor="@color/colorGreenTheme2"/>
 
     </RelativeLayout>
 
@@ -165,7 +202,12 @@
     <RelativeLayout
         android:id="@+id/reportStepThreeContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/panel_style">
 
         <ProgressBar
             android:id="@+id/progressbar"
@@ -175,34 +217,42 @@
             android:indeterminate="true"
             android:max="100"
             android:backgroundTint="#fff"
-            android:indeterminateTint="@color/colorAccent"
+            android:indeterminateTint="@color/colorPrimaryDark"
             android:layout_marginTop="-7dp"/>
 
-
-        <TextView
-            android:id="@+id/reportStepThreeTitle"
+        <RelativeLayout
+            android:id="@+id/headerPanelStepThree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:letterSpacing=".07"
-            android:padding="20dp"
-            android:layout_marginBottom="2dp"
-            android:text="Agrega una foto para ilustrar la situación"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:background="@drawable/panel_header_style"
+            android:layout_marginBottom="30dp">
 
+            <TextView
+                android:id="@+id/reportStepThreeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing=".02"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginBottom="2dp"
+                android:text="Agrega una foto para ilustrar la situación"
+                android:textAlignment="center"
+                android:textColor="@color/textDark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
 
 
         <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/openCameraBtn"
-            android:layout_below="@id/reportStepThreeTitle"
-            android:layout_width="250dp"
+            android:layout_below="@id/headerPanelStepThree"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             fancy:mfb_icon="@string/fawi_camera"
             fancy:mfb_text = "Tomar Foto"
             fancy:mfb_textSize = "16sp"
             fancy:mfb_fontIconSize="24sp"
+            fancy:mfb_textFont= "@font/montserrat"
             android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
             android:paddingBottom="10dp"
@@ -212,8 +262,8 @@
             fancy:mfb_borderColor="#FFFFFF"
             fancy:mfb_borderWidth="1dp"
             fancy:mfb_radius="30dp"
-            fancy:mfb_defaultColor="@color/colorAccent"
-            fancy:mfb_focusColor="#9bd823"/>
+            fancy:mfb_defaultColor="@color/colorPrimaryTheme2"
+            fancy:mfb_focusColor="@color/colorGreenTheme2"/>
 
         <ImageView
             android:id="@+id/cameraImage"
@@ -221,18 +271,19 @@
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
             android:layout_centerHorizontal="true"
-            android:layout_width="200dp"
-            android:layout_height="300dp" />
+            android:layout_width="180dp"
+            android:layout_height="280dp" />
 
         <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/toStepFourBtn"
             android:layout_below="@id/cameraImage"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             fancy:mfb_icon="@string/fawi_arrow_circle_o_right"
             fancy:mfb_text = "Continuar"
             fancy:mfb_textSize = "16sp"
             fancy:mfb_fontIconSize="24sp"
+            fancy:mfb_textFont= "@font/montserrat"
             android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
             android:paddingBottom="10dp"
@@ -242,16 +293,96 @@
             fancy:mfb_borderColor="#FFFFFF"
             fancy:mfb_borderWidth="1dp"
             fancy:mfb_radius="30dp"
-            fancy:mfb_defaultColor="@color/colorGreenLight"
-            fancy:mfb_focusColor="@color/colorFucsia"/>
-
-
-
-
+            fancy:mfb_defaultColor="@color/colorGreenTheme2"
+            fancy:mfb_focusColor="@color/colorGreenTheme2"/>
 
     </RelativeLayout>
 
+    <!--Four Step Layout-->
+    <RelativeLayout
+        android:id="@+id/reportStepFourContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/panel_style">
 
+    <RelativeLayout
+        android:id="@+id/headerPanelStepFour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/panel_header_success_style"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:id="@+id/reportStepFourTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing=".02"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="5dp"
+            android:text="¡Muchas Gracias!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/reportStepFourDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reportStepFourTitle"
+            android:text="Su reporte se ha envíado"
+            android:fontFamily="@font/montserrat"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/thankYouImage"
+            android:layout_below="@id/headerPanelStepFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/hands_tree"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/thankYouMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thankYouImage"
+            android:text="Juntos Protegemos Nuestra Vegetación"
+            android:fontFamily="@font/montserrat"
+            android:textAlignment="center"
+            android:textColor="@color/textDark"
+            android:textSize="14sp" />
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/closeReportBtn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            fancy:mfb_iconPaddingLeft="0dp"
+            fancy:mfb_iconPaddingRight="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            fancy:mfb_icon="@string/fawi_window_close"
+            fancy:mfb_text = ""
+            fancy:mfb_textColor="#FFFFFF"
+            fancy:mfb_radius="64dp"
+            fancy:mfb_defaultColor="@color/colorGreenTheme2"
+            fancy:mfb_focusColor="@color/colorGreenTheme2"/>
+
+    </RelativeLayout>
 
 
 </FrameLayout>
