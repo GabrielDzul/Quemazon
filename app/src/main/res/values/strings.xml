@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Quemazon</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_report_title">Nuevo Reporte</string>
+
+    <string name="title_activity_add_report">AddReportActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="gps_network_not_enabled">Por favor activa el GPS para obtener tu localización.</string>
+    <string name="open_location_settings">Activar</string>
+    <string name="Cancel">Cancelar</string>
+</resources>

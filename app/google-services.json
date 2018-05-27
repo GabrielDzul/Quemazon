@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "358831579236",
+    "firebase_url": "https://quemazon-19766.firebaseio.com",
+    "project_id": "quemazon-19766",
+    "storage_bucket": "quemazon-19766.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358831579236:android:60906066cc0c3217",
+        "android_client_info": {
+          "package_name": "com.kokomusoft.quemazon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358831579236-mnf2djber8v99lqo663huunh5ogketnl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kokomusoft.quemazon",
+            "certificate_hash": "1f7a825b0d13162eaf56fb2272a22a22c3b27692"
+          }
+        },
+        {
+          "client_id": "358831579236-17831knclk4tcq4lmnnjb3bharmt51hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZft7fH7_Rk3jOy3ondUZJiPkQcgBDIqw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358831579236-17831knclk4tcq4lmnnjb3bharmt51hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

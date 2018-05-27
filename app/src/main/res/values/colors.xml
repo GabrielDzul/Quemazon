@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#cb1925</color>
+    <color name="colorPrimaryDark">#660c12</color>
+    <color name="colorAccent">#fa6d13</color>
+    <color name="colorGreen">#0d8f69</color>
+    <color name="colorGreenLight">#b6d539</color>
+    <color name="colorGrey">#919191</color>
+    <color name="colorBlue">#2985c4</color>
+    <color name="Yellow">#febd25</color>
+    <color name="colorFucsia">#b43993</color>
+    <color name="backgroundColor">E9E9E9</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="colorPrimaryTheme2">#ED8739</color>
+    <color name="colorGreenTheme2">#71AA68</color>
+    <color name="colorAccentTheme2">#DA473A</color>
+    <color name="colorBlueTheme2">#667ADD</color>
+    <color name="YellowTheme2">#E6B034</color>
+    <color name="colorFucsiaTheme2">#FD7397</color>
+    <color name="panelBackground">#F5F5F5</color>
+
+
+
+
+</resources>

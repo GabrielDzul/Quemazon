@@ -1,0 +1,257 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg3"
+    tools:context="com.kokomusoft.quemazon.AddReportFragment">
+
+    <!-- First Step layout -->
+    <RelativeLayout
+        android:id="@+id/reportStepOneContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/reportStepOneTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing=".07"
+            android:padding="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Empecemos por la ubicación del siniestro"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/reportStepOneDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reportStepOneTitle"
+            android:layout_marginBottom="50dp"
+            android:text="El incendio se encuentra en:"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/currentLocationBtn"
+            android:layout_below="@id/reportStepOneDescription"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            fancy:mfb_icon="@string/fawi_map_marker"
+            fancy:mfb_text = "Mi ubicación Actual"
+            fancy:mfb_textSize = "16sp"
+            fancy:mfb_fontIconSize="24sp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            fancy:mfb_borderColor="#FFFFFF"
+            fancy:mfb_borderWidth="1dp"
+            fancy:mfb_radius="30dp"
+            fancy:mfb_defaultColor="#cb1925"
+            fancy:mfb_focusColor="#9bd823"/>
+
+
+
+
+
+    </RelativeLayout>
+
+    <!--Second Step Layout-->
+    <RelativeLayout
+        android:id="@+id/reportStepTwoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/reportStepTwoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing=".07"
+            android:padding="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Intensidad"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/reportStepTwoDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reportStepTwoTitle"
+            android:layout_marginBottom="50dp"
+            android:text="¿Qué tan intenso es?"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/lowIntensityBtn"
+            android:layout_below="@id/reportStepTwoDescription"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            fancy:mfb_icon="@string/fawi_smile_o"
+            fancy:mfb_text = "LEVE - Apenas iniciando"
+            fancy:mfb_textSize = "16sp"
+            fancy:mfb_fontIconSize="24sp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="30dp"
+            fancy:mfb_borderColor="#FFFFFF"
+            fancy:mfb_borderWidth="1dp"
+            fancy:mfb_radius="30dp"
+            fancy:mfb_defaultColor="@color/Yellow"
+            fancy:mfb_focusColor="#9bd823"/>
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/mediumIntensityBtn"
+            android:layout_below="@id/lowIntensityBtn"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            fancy:mfb_icon="@string/fawi_meh_o"
+            fancy:mfb_text = "CONTROLABLE - Se expande, pero no peligran vidas"
+            fancy:mfb_textSize = "16sp"
+            fancy:mfb_fontIconSize="24sp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="30dp"
+            fancy:mfb_borderColor="#FFFFFF"
+            fancy:mfb_borderWidth="1dp"
+            fancy:mfb_radius="30dp"
+            fancy:mfb_defaultColor="@color/colorAccent"
+            fancy:mfb_focusColor="#9bd823"/>
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/highIntensityBtn"
+            android:layout_below="@id/mediumIntensityBtn"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            fancy:mfb_icon="@string/fawi_frown_o"
+            fancy:mfb_text = "FUERA DE CONTROL - Peligran vidas o edificios"
+            fancy:mfb_textSize = "16sp"
+            fancy:mfb_fontIconSize="24sp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="30dp"
+            fancy:mfb_borderColor="#FFFFFF"
+            fancy:mfb_borderWidth="1dp"
+            fancy:mfb_radius="30dp"
+            fancy:mfb_defaultColor="@color/colorPrimary"
+            fancy:mfb_focusColor="#9bd823"/>
+
+    </RelativeLayout>
+
+    <!-- Third Step layout -->
+    <RelativeLayout
+        android:id="@+id/reportStepThreeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:max="100"
+            android:backgroundTint="#fff"
+            android:indeterminateTint="@color/colorAccent"
+            android:layout_marginTop="-7dp"/>
+
+
+        <TextView
+            android:id="@+id/reportStepThreeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing=".07"
+            android:padding="20dp"
+            android:layout_marginBottom="2dp"
+            android:text="Agrega una foto para ilustrar la situación"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/openCameraBtn"
+            android:layout_below="@id/reportStepThreeTitle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            fancy:mfb_icon="@string/fawi_camera"
+            fancy:mfb_text = "Tomar Foto"
+            fancy:mfb_textSize = "16sp"
+            fancy:mfb_fontIconSize="24sp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            fancy:mfb_borderColor="#FFFFFF"
+            fancy:mfb_borderWidth="1dp"
+            fancy:mfb_radius="30dp"
+            fancy:mfb_defaultColor="@color/colorAccent"
+            fancy:mfb_focusColor="#9bd823"/>
+
+        <ImageView
+            android:id="@+id/cameraImage"
+            android:layout_below="@id/openCameraBtn"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="300dp" />
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/toStepFourBtn"
+            android:layout_below="@id/cameraImage"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            fancy:mfb_icon="@string/fawi_arrow_circle_o_right"
+            fancy:mfb_text = "Continuar"
+            fancy:mfb_textSize = "16sp"
+            fancy:mfb_fontIconSize="24sp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            fancy:mfb_borderColor="#FFFFFF"
+            fancy:mfb_borderWidth="1dp"
+            fancy:mfb_radius="30dp"
+            fancy:mfb_defaultColor="@color/colorGreenLight"
+            fancy:mfb_focusColor="@color/colorFucsia"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>
